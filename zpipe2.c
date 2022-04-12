@@ -105,7 +105,7 @@ int compress_data(FILE* source, FILE* dest, int level)
 
     t1 = clock();
     
-    ret = compress2(dest_data, &dest_len, source_data, source_len, level);
+    ret = compress(dest_data, &dest_len, source_data, source_len);
 
     t2 = clock();
     double elapsed = ((double)(t2 - t1)) / CLOCKS_PER_SEC;
